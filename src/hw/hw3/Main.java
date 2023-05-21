@@ -1,10 +1,10 @@
-package hw3;
+package hw.hw3;
 
-import hw3.task1.Bird;
-import hw3.task2.Chair;
-import hw3.task3.Car;
-import hw3.task3.Cycle;
-import hw3.task3.Snail;
+import hw.hw3.task1.Bird;
+import hw.hw3.task2.Chair;
+import hw.hw3.task3.Car;
+import hw.hw3.task3.Cycle;
+import hw.hw3.task3.Snail;
 
 public class Main {
 
@@ -30,18 +30,18 @@ public class Main {
 
 		//Legs
 		Chair.Legs oldCheirLegs = oldChair.new Legs(4);
-		System.out.println(oldCheirLegs.quantity);
+		System.out.println(oldCheirLegs.getQuantity());
 		oldCheirLegs.breakeLeg();
 
 		//Chair-back
 		Chair.ChairBack oldChairBack = oldChair. new ChairBack(15);
-		System.out.println(oldChairBack.corner);
+		System.out.println(oldChairBack.getCorner());
 		oldChairBack.lowerTheBack();
 		oldChairBack.raiseTheBack();
 
 		//Seat
 		Chair.Seat oldChairSeat = oldChair.new Seat("leather");
-		System.out.println(oldChairSeat.matirial);
+		System.out.println(oldChairSeat.getMatirial());
 		oldChairSeat.cleanSeat();
 
 		//Task3 testing--------------------------------------------
