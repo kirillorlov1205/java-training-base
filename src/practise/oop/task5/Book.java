@@ -1,12 +1,12 @@
 package practise.oop.task5;
 
-import java.util.Collection;
+import java.util.ArrayList;
 
 public class Book {
 	private String title;
 	private String author;
 	private String isbn;
-	private static Collection<Book> bookCollection;
+	private static ArrayList<Book> bookCollection = new ArrayList<Book>();
 
 	public Book(String title, String author, String isbn) {
 		this.title = title;
@@ -15,10 +15,19 @@ public class Book {
 	}
 
 	public static void addBookToCollection(Book book) {
-		Book.bookCollection.add(book);
+		bookCollection.add(book);
 	}
 
-	public static Collection<Book> getBookCollection() {
-		return Book.bookCollection;
+	public static String showBookCollection() {
+		return bookCollection.toString();
+	}
+
+	@Override
+	public String toString() {
+		return "Book{" +
+				"title='" + title + '\'' +
+				", author='" + author + '\'' +
+				", isbn='" + isbn + '\'' +
+				'}';
 	}
 }

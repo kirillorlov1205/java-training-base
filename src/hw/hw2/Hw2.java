@@ -1,24 +1,65 @@
 package hw.hw2;
 
-public class Hw2 {
+import java.util.Scanner;
 
-	//Task1--------------------------------------------
-	public static void getStr() {
-		System.out.println("Hi man!\nWhat we will do now?\n\"I work\"\n-\"No, please\"");
+public class Hw2 {
+	public static void main(String[] args) {
+
+		//Task 1 string--------------------------------------------
+//		System.out.println("Hi man!\nWhat we will do now?\n\"I work\"\n-\"No, please\"");
+
+		//Task 2 mathematics--------------------------------------------
+/*			2+4 = 6
+			3++ + 24 - --4 = 24
+			4.0 + 2.4 + --2 = 7.4
+			2+2*2 = 6
+			(2+2)*2 = 8
+			(4>5)||(3>2) = true
+			(21>5)||(4<3) = true
+			(2>0)&&(5>4) = true
+			(3<5)&&(6>4) = true
+			!(5>=5) = false
+			3-- -3 + ++4 + 4/2++ * 5%3 - (17%4) = 8*/
+
+		//Task 3 bytes --------------------------------------------
+	/*  int[] array = new int[47]; = 188
+   		double array[] = {3, 5, 4, 6, 88}; = 40
+   		char array[] = new char[33]; = 66 */
+
+		//Task 4 FormatStr--------------------------------------------
+		System.out.println(strFormat("testing"));
+
+		//Task 6 Recursion--------------------------------------------
+		System.out.println(getDoubledInt(3));
+
+		//Task 5 Sum of array-----------------------------------------
+		int[][] arr = {{1, 2, 5, 32}, {123, 23, 1}};
+		int sum = 0;
+
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				sum += arr[i][j];
+			}
+		}
+		System.out.println(sum);
+
+		//Task 5 Sum of array-----------------------------------------
+		System.out.println(addition());
 	}
 
-	//Task2--------------------------------------------
-//		---
-	//Task3--------------------------------------------
-	//Task4--------------------------------------------
+	public static double addition() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Provide number one");
+		double num1 = scan.nextDouble();
+		System.out.println("Provide number two");
+		double num2 = scan.nextDouble();
+		return num1 + num2;
+	}
+
 	public static String strFormat(String str) {
 		return "[" + str + "]";
 	}
-	//Task4--------------------------------------------
 
-	/*
-6) Написать рекурсию, которая будет принимать в качестве параметра инт переменную
-и будет выводить на экран принятое число увеличенное на два, пока число не станет больше 30*/
 	public static int getDoubledInt(int number) {
 		if (number > 30) {
 			return number;
@@ -26,39 +67,4 @@ public class Hw2 {
 			return getDoubledInt(number * 2);
 		}
 	}
-
-
 }
-
-/*1) Напишите как бы вы записали 4 строки ниже в System.out.println()
-   Задание на использоваие спецсимволов
---начало строк--
-Hi man!
-What we will do now?
-"I work"
--"No, please"
---конец строк--
-2) написать результат вычисления и тип данных результата
-2+4
-3++ + 24 - --4
-4.0 + 2.4 + --2
-2+2*2 = 6
-(2+2)*2 = 8
-(4>5)||(3>2)
-(21>5)||(4<3)
-(2>0)&&(5>4)
-(3<5)&&(6>4)
-!(5>=5)
-3-- -3 + ++4 + 4/2++ * 5%3 - (17%4)
-3) сколько будут занимать в памяти следующие массивы:
-   int[] array = new int[47];
-   double array[] = {3, 5, 4, 6, 88};
-   char array[] = new char[33];
-4) Написать метод который будет принимать в качестве параметра строку,
-добавлять перед строкой '[' и добавлять после строки ']' и вывадить получившуюся строку на экран
-5) Написать метод, который будет принимать в качвестве параметра двумерный инт массив (int[][])
-и подсчитывать количество едениц в массиве.
-4) Написать рекурсию, которая будет принимать в качестве параметра инт переменную
-и будет выводить на экран принятое число увеличенное на два, пока число не станет больше 30
-* 5) Написать метод который будет считывать с клавиатуры 2 числа, складывать их между собой и выводить результат на экран
-* Задание со звездочкой, значит решение может быть реализовано по разному*/
