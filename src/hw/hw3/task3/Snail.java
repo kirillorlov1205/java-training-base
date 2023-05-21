@@ -1,4 +1,4 @@
-package hw3.task3;
+package hw.hw3.task3;
 
 public class Snail {
 

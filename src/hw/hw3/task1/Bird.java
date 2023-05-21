@@ -1,4 +1,4 @@
-package hw3.task1;
+package hw.hw3.task1;
 
 public class Bird {
 	private final String type;
